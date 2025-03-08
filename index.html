@@ -9,6 +9,8 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login | เข้าสู่ระบบ</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
@@ -16,27 +18,32 @@
     />
   </head>
   <body>
-    <div class="container">
-      <h2>เข้าสู่ระบบ</h2>
-      <img id="statusImage" src="./wait.jpg" alt="Status Image" />
-      <form id="loginForm">
+    <div class="container animate__animated animate__fadeIn">
+      <h2 class="animate__animated animate__bounceIn animate__delay-1s">เข้าสู่ระบบ</h2>
+      <img id="statusImage" class="animate__animated animate__zoomIn animate__delay-1s" src="./wait.jpg" alt="Status Image" />
+      <form id="loginForm" class="animate__animated animate__fadeInUp animate__delay-1s">
         <div id="errorMessage" class="error-message"></div>
-        <div class="input-group">
-          <input type="text" id="username" placeholder="กรอกชื่อ" />
+        <div class="input-group group relative">
+          <i class="fas fa-user absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-400"></i>
+          <input type="text" id="username" placeholder="กรอกชื่อ" class="pl-12" />
         </div>
-        <div class="input-group">
-          <input type="password" id="password" placeholder="กรอกรหัสผ่าน" />
+        <div class="input-group group relative">
+          <i class="fas fa-lock absolute left-4 top-1/2 transform -translate-y-1/2 text-pink-400"></i>
+          <input type="password" id="password" placeholder="กรอกรหัสผ่าน" class="pl-12" />
         </div>
-        <button type="submit">เข้าสู่ระบบ</button>
+        <button type="submit" class="group">
+          <span class="group-hover:scale-105 inline-block transition-transform duration-200">เข้าสู่ระบบ</span>
+          <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform duration-200"></i>
+        </button>
       </form>
     </div>
 
     <!-- ป๊อบอัพ -->
     <div class="modal" id="successModal">
-      <div class="modal-content">
+      <div class="modal-content animate__animated animate__zoomIn">
         <span class="close" id="closeModal">&times;</span>
         <h2>นั้นแน๊ เข้ามาในใจเเล้วไม่ให้ออกน้า</h2>
-        <img src="./sucecss.jpg" alt="Success Image" />
+        <img src="./sucecss.jpg" alt="Success Image" class="animate__animated animate__heartBeat" />
       </div>
     </div>
     <script src="script.js"></script>
